@@ -1,0 +1,29 @@
+{
+  "_id": {
+    "$oid": "578f6fa2df35c7fbdbaed8c6"
+  },
+  "recrd": "",
+  "vesslterms": "",
+  "feature_type": "Wrecks - Submerged, dangerous",
+  "chart": "US,U1,graph,DNC H1409860",
+  "latdec": {
+    "$numberDouble": "9.3560572"
+  },
+  "londec": {
+    "$numberDouble": "-79.9074173"
+  },
+  "gp_quality": "",
+  "depth": "",
+  "sounding_type": "",
+  "history": "",
+  "quasou": "depth unknown",
+  "watlev": "always under water/submerged",
+  "coordinates": [
+    {
+      "$numberDouble": "-79.9074173"
+    },
+    {
+      "$numberDouble": "9.3560572"
+    }
+  ]
+}

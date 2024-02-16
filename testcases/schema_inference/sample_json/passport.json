@@ -1,0 +1,104 @@
+{
+    "api_request": {
+        "error": {},
+        "resources": [
+            "document"
+        ],
+        "status": "success",
+        "status_code": 201,
+        "url": "https://api.mindee.net/v1/products/mindee/passport/v1/predict"
+    },
+    "document": {
+        "id": "c2651887-85f0-4890-88a1-55d1acbe1263",
+        "name": "sample_passport.jpg",
+        "n_pages": 1,
+        "is_rotation_applied": true,
+        "inference": {
+            "started_at": "2021-05-06T16:37:28+00:00",
+            "finished_at": "2021-05-06T16:37:29+00:00",
+            "processing_time": 0.56,
+            "pages": [
+                {
+                    "id": 0,
+                    "orientation": { "value": 0 },
+                    "extras": {}
+                }
+            ],
+            "prediction": {
+                "prediction": {
+                    "birth_date": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.342, 0.689], [0.569, 0.689], [0.569, 0.713], [0.342, 0.713]],
+                        "value": "1995-05-20"
+                    },
+                    "birth_place": {
+                        "confidence": 0.89,
+                        "page_id": 0,
+                        "polygon": [[0.442, 0.725], [0.555, 0.725], [0.555, 0.743], [0.442, 0.743]],
+                        "value": "CAMTETH"
+                    },
+                    "country": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.509, 0.548], [0.558, 0.548], [0.558, 0.567], [0.509, 0.567]],
+                        "value": "GBR"
+                    },
+                    "expiry_date": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.34, 0.797], [0.575, 0.797], [0.575, 0.82], [0.34, 0.82]],
+                        "value": "2017-04-22"
+                    },
+                    "gender": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.054, 0.92], [0.927, 0.92], [0.927, 0.944], [0.054, 0.944]],
+                        "value": "M"
+                    },
+                    "given_names": {
+                        "confidence": 0.99,
+                        "page_id": 0,
+                        "polygon": [[0.342, 0.617], [0.435, 0.617], [0.435, 0.638], [0.342, 0.638]],
+                        "value": "HENERT"
+                    },
+                    "id_number": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.723, 0.548], [0.899, 0.548], [0.899, 0.568], [0.723, 0.568]],
+                        "value": "707797979"
+                    },
+                    "issuance_date": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.34, 0.763], [0.564, 0.763], [0.564, 0.785], [0.34, 0.785]],
+                        "value": "2012-04-22"
+                    },
+                    "mrz1": {
+                        "confidence": 0.99,
+                        "page_id": 0,
+                        "polygon": [[0.056, 0.883], [0.926, 0.883], [0.926, 0.911], [0.056, 0.911]],
+                        "value": "P<GBRPUDARSAN<<HENERT<<<<<<<<<<<<<<<<<<<<<<<"
+                    },
+                    "mrz2": {
+                        "confidence": 1,
+                        "page_id": 0,
+                        "polygon": [[0.054, 0.92], [0.927, 0.92], [0.927, 0.944], [0.054, 0.944]],
+                        "value": "7077979792GBR9505209M1704224<<<<<<<<<<<<<<00"
+                    },
+                    "orientation": {
+                        "confidence": 0.99,
+                        "degrees": 0
+                    },
+                    "surname": {
+                        "confidence": 0.99,
+                        "page_id": 0,
+                        "polygon": [[0.34, 0.581], [0.472, 0.581], [0.472, 0.603], [0.34, 0.603]],
+                        "value": "PUDARSAN"
+                    }
+                }
+            },
+            "extras": {}
+        }
+    }
+}

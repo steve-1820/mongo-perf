@@ -3,6 +3,7 @@ tmp/*
 tags
 *.pyc
 *.swp
+env
 benchrun_daemon.conf
 
 node_modules

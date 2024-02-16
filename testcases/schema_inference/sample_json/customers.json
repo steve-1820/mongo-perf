@@ -1,0 +1,21 @@
+{
+ "username": "lejoshua",
+ "name": "Michael Johnson",
+ "address": "15989 Edward Inlet\nLake Maryton, NC 39545",
+ "birthdate": {"$date": 54439275000},
+ "email": "courtneypaul@gmail.com",
+ "accounts": [
+   470650,
+   443178
+ ],
+ "tier_and_details": {
+   "b5f19cb532fa436a9be2cf1d7d1cac8a": {
+      "tier": "Silver",
+      "benefits": [
+        "dedicated account representative"
+      ],
+      "active": true,
+      "id": "b5f19cb532fa436a9be2cf1d7d1cac8a"
+      }
+ }
+}

@@ -7,7 +7,8 @@ import sys
 import json
 import urllib.request, urllib.error, urllib.parse
 import os
-
+import csv
+import glob
 
 
 class MongoShellCommandError(Exception):
@@ -108,6 +109,8 @@ def parse_arguments():
     parser.add_argument('--shareDataset', dest='shareDataset', nargs='?', const='true',
                         choices=['true','false'], default='false',
                         help='Share the dataset, created by the first test with all following tests/trials.')
+    parser.add_argument('--summary', dest='csv_summary',
+                        help='write the output of all results to a joint csv file')
     return parser
 
 
@@ -229,7 +232,7 @@ def main():
         # Open a mongo shell subprocess and load necessary files.
         mongo_proc = Popen([args.shellpath, "--norc", "--quiet", js_file.name,
                            "--host", args.hostname, "--port", args.port] + auth,
-                           stdout=PIPE, text=True)
+                           stdout=PIPE, universal_newlines=True)
 
         # Read test output.
         readout = False
@@ -264,6 +267,21 @@ def main():
         out.close()
     else:
         print(json.dumps(results_parsed, indent=4, separators=(',', ': ')))
+
+    # custom csv file output
+    if (args.csv_summary):
+        csv_body = "test,threads,ops_per_sec,ms_per_op\n"
+        for result in results_parsed["results"]:
+            test_name = result["name"]
+            for thread_number, thread_result in result["results"].items():
+                if isinstance(thread_result, dict):
+                    ops_per_sec = thread_result["ops_per_sec"]
+                    ms_per_op = 1 / ops_per_sec * 1000
+                    csv_body += f"{test_name},{thread_number},{ops_per_sec},{ms_per_op}\n"
+
+        text_file = open(args.csv_summary, "w")
+        text_file.write(csv_body)
+        text_file.close()
 
 if __name__ == '__main__':
     try:
